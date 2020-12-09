@@ -12,6 +12,7 @@ sys.path.append(sys.path[0] + '\\util')
 from VarConfig import *
 from testcase.CJM.CJMAPI import CJMAPI
 
-CJMAPI()
+def runTest(FilePath):
+    CJMAPI(FilePath)
 
 

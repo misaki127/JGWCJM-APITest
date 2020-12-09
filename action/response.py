@@ -344,4 +344,4 @@ def jsonSearch(jsonData, findData, dataName):
             raise SyntaxError
 
     except Exception as e:
-        logging.ingo("搜索功能失败："+e)
+        logging.info("搜索功能失败："+e)

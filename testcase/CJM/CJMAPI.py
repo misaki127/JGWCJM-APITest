@@ -96,9 +96,17 @@ def getGlobalVariable():
 
 
 
-def CJMAPI():
+def CJMAPI(FilePath):
     try:
         global cookie,dataIntoExcel,tokenSheet
+        # 创建解析Excel对象
+        excelObj = ParseExcel()
+
+        # 将Excel数据文件加载到内存
+        if FilePath == None:
+            excelObj.loadWorkBook(dataFilePath)
+        else:
+            excelObj.loadWorkBook(FilePath)
         #根据Excel文件中的sheet名获取sheet对象
         caseSheet=excelObj.getSheetByName('测试用例')
 
